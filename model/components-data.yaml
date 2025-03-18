@@ -1,0 +1,13 @@
+train: /content/drive/MyDrive/dataset/acdc/train/images
+val: /content/drive/MyDrive/dataset/acdc/valid/images
+test: /content/drive/MyDrive/dataset/acdc/test/images
+
+nc: 3
+names: ['rv', 'myo', 'lv']
+
+roboflow:
+  workspace: kworkspace-aw19a
+  project: cardiac_components
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/kworkspace-aw19a/cardiac_components/dataset/1

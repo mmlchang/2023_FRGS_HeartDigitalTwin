@@ -1,0 +1,13 @@
+train: /content/drive/MyDrive/dataset/acdc/whole/train
+val: /content/drive/MyDrive/dataset/acdc/whole/valid
+test: /content/drive/MyDrive/dataset/acdc/whole/test
+
+nc: 3
+names: ['ap', 'basal', 'mid']
+
+roboflow:
+  workspace: kworkspace-aw19a
+  project: cardiac-whole
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/kworkspace-aw19a/cardiac-whole/dataset/2
