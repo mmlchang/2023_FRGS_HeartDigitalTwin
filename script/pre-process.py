@@ -154,3 +154,14 @@ def mask_non_cardiac(img, label_txt, save_folder, id):
         
     return img_name
 
+#clean dataset (remove the series of random numbers after '_png.'
+def rename_images(curr_dir, text_or_jpg='.jpg', old_suffix='_png.'):
+    list_imgs = os.listdir(curr_dir)
+
+    for img in list_imgs:
+        if old_suffix in img:
+            new_name = (img.split(old_suffix))[0] + text_or_jpg
+            old_file_path = os.path.join(curr_dir, img)
+            new_file_path = os.path.join(curr_dir, new_name)
+            os.rename(old_file_path, new_file_path)
+            print(f"renamed: {new_file_path}")
