@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+# NOTE: please clone MedSAM https://github.com/bowang-lab/MedSAM 
+# into directory and download the weight medsam_vit_b.pth
+
 import os
 join = os.path.join
 import sys
