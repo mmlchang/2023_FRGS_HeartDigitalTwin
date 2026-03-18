@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@three-ts/orbit-controls": "^1.4.7",
+    "chart.js": "^4.5.1",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "three": "^0.182.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "scripts": {
+    "prestart": "node HeatMapping.js",
+    "start": "Vite" 
+  }
+}

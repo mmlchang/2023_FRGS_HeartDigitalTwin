@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>VisHeart - 17 Segment Visualisation</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="mainContainer">   
+      <div id="chartContainer">
+        <div id="AHAContainer">
+          <h3>Cardiac 17 Segment Plot (Radial Strain)</h3>
+          <canvas id="AHAPlot"></canvas>
+        </div>
+        <div id="colorBarContainer">
+          <p> </p>
+          <div id="HeatMapScale">
+            <div><p>-10%</p> </div>
+            <div><p>45%</p> </div>
+          </div>
+          <div id="colorBar"></div>
+        </div> 
+      </div>
+      <div id="heartContainer">
+        <h3>3D Heart Model</h3>
+        <div id="heartCanvas"></div>
+      </div>
+    </div>
+
+    <script type="module" src="assign-color.js"></script>
+    
+    <script type="module" src="/main.js"></script>
+    
+
+    <!-- <div id="tooltip" style="
+      position: absolute;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      pointer-events: none;
+      display: none;
+      font-family: sans-serif;
+      font-size: 14px;
+      ">
+      </div> -->
+
+  </body>
+</html>

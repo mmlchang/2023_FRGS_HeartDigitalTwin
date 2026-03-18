@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 10%;
+}
+
+h3 {
+  text-align: center;
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  /* background-color:#6c3636; */
+}
+
+#chartContainer, #heartContainer {
+  flex: 1;
+  padding-top: 3%;
+  align-items: center;
+  flex-direction: column;
+}
+
+#colorBarContainer {
+  height: 15%;
+  width: 100%;
+  font-weight: bold;
+}
+
+#colorBar {
+  border: #000 solid 1px;
+}
+
+#AHAContainer {
+  height: 85%;
+  width: 100%;
+  /* background-color: aqua; */
+}
+
+#heartCanvas {
+  height:90%;
+  width: 100%;
+  /* background-color: #6c3636; */
+}
+
+#HeatMapScale {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;    
+  width: 100%;  
+  padding-bottom: 0;
+  margin-bottom: 0;
+} 
+
+
