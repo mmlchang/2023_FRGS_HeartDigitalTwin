@@ -109,25 +109,24 @@ class UNet2D(nn.Module):
 
 ## Test Run
 
-if __name__ == "__main__":
-    model = UNet2D(in_ch =1, out_ch = 4)
-    
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = model.to(device)
-    
-    weights_path = ".../unet_best.pth"
-    state_dict = torch.load(weights_path, map_location=device) 
-    model.load_state_dict(state_dict)
-    model.eval()  # evaluation mode
-    
-    x = torch.randn(1, 1, 256, 256) # input.
-    
-    with torch.no_grad():
-        y = model(x) # logit output
-   
-    probs = F.softmax(y, dim=1)       # shape: [1, num classes, 256, 256]
-    pred_mask = torch.argmax(probs, dim=1) # shape: [1, 256, 256]
-    pred_mask = pred_mask.squeeze(0).cpu() # shape: [256, 256]
-    
+model = UNet2D(in_ch =1, out_ch = 4)
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model = model.to(device)
+
+weights_path = ".../unet_best.pth"
+state_dict = torch.load(weights_path, map_location=device) 
+model.load_state_dict(state_dict)
+model.eval()  # evaluation mode
+
+x = torch.randn(1, 1, 256, 256) # input.
+
+with torch.no_grad():
+    y = model(x) # logit output
+
+probs = F.softmax(y, dim=1)       # shape: [1, num classes, 256, 256]
+pred_mask = torch.argmax(probs, dim=1) # shape: [1, 256, 256]
+pred_mask = pred_mask.squeeze(0).cpu() # shape: [256, 256]
+
 
 
