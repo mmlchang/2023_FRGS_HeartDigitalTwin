@@ -9,7 +9,7 @@
     "vite": "^7.3.1"
   },
   "scripts": {
-    "prestart": "node HeatMapping.js",
-    "start": "Vite" 
+    "start": "vite",
+    "dev": "vite" 
   }
 }
