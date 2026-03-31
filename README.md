@@ -40,9 +40,9 @@ A Novel Patient-specific Heart Digital twin from CMR Images for Early Detection 
 │   │   ├── scripts/                          # Pre-process & segmentation script for Detection & MedSAM segmentation pipeline
 │   │   └── requirements.txt    
 │   └── v2-unet/                              # U-net model (Mamba-Encoder U-Net)
-│       ├── data/                             # Links to the raw and processed ACDC, MMs & MMs-2 cardiac datasets
+│       ├── data/                             # Links to the ACDC, MMs & MMs-2 cardiac datasets
 │       ├── models/                           # Model.py and weights
-│       ├── utils/   
+│       ├── utils/                            # pre-process script
 │       └── requirements.txt                
 └── visualisation/
     ├── node_modules/                         # Installed packages/dependencies
