@@ -15,7 +15,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#segmentation-pipeline">Prerequisites</a></li>
+        <li><a href="#segmentation-pipeline-detection">Prerequisites</a></li>
         <li><a href="#visualisation-prerequisites">Run Visualisation</a></li>
       </ul>
     </li>
