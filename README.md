@@ -34,13 +34,16 @@ A Novel Patient-specific Heart Digital twin from CMR Images for Early Detection 
 ```
 2023_FRGS_HeartDigitalTwin/
 ├── segmentation/
-│   ├── dataset/
-│   │   ├── acdc/                             # ACDC Cardiac Dataset
-│   │   └── scd/                              # SCD Cardiac Dataset 
-│   ├── models/
-│   │   ├── model-2-mamba-unet/               # Mamba-Encoder U-net model
-│   │   └── model-segmentation-pipeline/      # Detection & MedSAM segmentation pipeline
-│   └── script/                               # Pre-process & segmentation script for Detection & MedSAM segmentation pipeline
+│   ├── v1-segmentation pipeline/             # Detection & MedSAM segmentation pipeline
+│   │   ├── data/                             # Links to the raw and processed ACDC cardiac dataset
+│   │   ├── weights/
+│   │   ├── scripts/                          # Pre-process & segmentation script for Detection & MedSAM segmentation pipeline
+│   │   └── requirements.txt    
+│   └── v2-unet/                              # U-net model (Mamba-Encoder U-Net)
+│       ├── data/                             # Links to the raw and processed ACDC, MMs & MMs-2 cardiac datasets
+│       ├── models/
+│       ├── utils/   
+│       └── requirements.txt                
 └── visualisation/
     ├── node_modules/                         # Installed packages/dependencies
     ├── public/assets/                        # .obj Heart component models
