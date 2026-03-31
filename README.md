@@ -36,12 +36,12 @@ A Novel Patient-specific Heart Digital twin from CMR Images for Early Detection 
 ├── segmentation/
 │   ├── v1-segmentation pipeline/             # Detection & MedSAM segmentation pipeline
 │   │   ├── data/                             # Links to the raw and processed ACDC cardiac dataset
-│   │   ├── weights/
+│   │   ├── weights/                          # YoloV11 model weights
 │   │   ├── scripts/                          # Pre-process & segmentation script for Detection & MedSAM segmentation pipeline
 │   │   └── requirements.txt    
 │   └── v2-unet/                              # U-net model (Mamba-Encoder U-Net)
 │       ├── data/                             # Links to the raw and processed ACDC, MMs & MMs-2 cardiac datasets
-│       ├── models/
+│       ├── models/                           # Model.py and weights
 │       ├── utils/   
 │       └── requirements.txt                
 └── visualisation/
