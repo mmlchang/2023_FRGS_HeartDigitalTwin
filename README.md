@@ -68,7 +68,23 @@ A Novel Patient-specific Heart Digital twin from CMR Images for Early Detection 
 
 For a local setup
 
-### Prerequisites
+
+### Segmentation Pipeline
+1. Install dependencies
+```
+  pip install -r requirements.txt
+```
+
+2. Run Inference
+```
+  yolo task=detect mode=predict \
+      model=./weights/best.pt \
+      conf=0.55 \
+      source=./data/pre-processed/images \
+      save=True \
+      save_txt=True
+```
+### Visualisation Prerequisites
 - Node.js (v22.12.0 used) and npm (v9.8.1 used)
 
 ### Run Visualisation

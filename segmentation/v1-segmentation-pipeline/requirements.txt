@@ -1,3 +1,5 @@
+ultralytics
+ipython
 numpy
 pandas
 matplotlib
