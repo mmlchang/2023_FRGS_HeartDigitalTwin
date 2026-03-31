@@ -15,8 +15,8 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#run-visualisation">Run Visualisation</a></li>
+        <li><a href="#segmentation-pipeline">Prerequisites</a></li>
+        <li><a href="#visualisation-prerequisites">Run Visualisation</a></li>
       </ul>
     </li>
   </ol>
@@ -69,7 +69,7 @@ A Novel Patient-specific Heart Digital twin from CMR Images for Early Detection 
 For a local setup
 
 
-### Segmentation Pipeline
+### Segmentation Pipeline (Detection)
 1. Install dependencies
 ```
   pip install -r requirements.txt
@@ -84,6 +84,8 @@ For a local setup
       save=True \
       save_txt=True
 ```
+---
+
 ### Visualisation Prerequisites
 - Node.js (v22.12.0 used) and npm (v9.8.1 used)
 
