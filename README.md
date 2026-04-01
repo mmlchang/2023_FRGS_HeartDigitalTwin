@@ -16,6 +16,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#segmentation-pipeline-detection">Run Segmentation Detection</a></li>
+        <li><a href="#segmentation-pipeline-medsam-segmentation">Run Segmentation Pipeline</a></li>
         <li><a href="#visualisation-prerequisites">Run Visualisation</a></li>
       </ul>
     </li>
@@ -71,19 +72,37 @@ For a local setup
 
 ### Segmentation Pipeline (Detection)
 1. Install dependencies
-```
-  pip install -r requirements.txt
-```
+   ```sh
+   pip install -r requirements.txt
+   ```
 
 2. Run Inference
-```
-  yolo task=detect mode=predict \
-      model=./weights/best.pt \
+   ```sh
+   yolo task=detect mode=predict \
+      model=../weights/best.pt \
       conf=0.55 \
-      source=./data/pre-processed/images \
+      source=../data/pre-processed/images \
       save=True \
       save_txt=True
-```
+   ```
+### Segmentation Pipeline (MedSAM Segmentation)
+1. Clone MedSAM repo
+   ```sh
+   git clone https://github.com/bowang-lab/MedSAM.git
+   ```
+
+2. Download the [MedSAM checkpoint](https://drive.google.com/drive/folders/1ETWmi4AiniJeWOt6HAsYgTjYv_fkgzoN) into folder i.e `checkpoints`
+
+3. Run inference-pipeline.py
+   ```sh
+   python inference-pipeline.py \
+       --detection_results_folder "../predict/labels" \
+       --dataset_imgs_folder "../dataset" \
+       --segmentation_results_folder "../segmentation" \
+       --medsam_checkpoint_folder "../checkpoints/" \
+       --medsam_weights "medsam_vit_b.pth"
+   ```
+
 ---
 
 ### Visualisation Prerequisites
