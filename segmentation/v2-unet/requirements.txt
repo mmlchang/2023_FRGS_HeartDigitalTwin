@@ -6,3 +6,4 @@ torchsummary
 timm
 monai
 sam-pytorch
+tqdm
